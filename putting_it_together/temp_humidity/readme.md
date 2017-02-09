@@ -9,5 +9,6 @@ In this project we'll hook up a temperature and humidity sensor. It's a cool sen
 4. Connect the negative end of the sensor (the fourth pin from the left)  to the Raspberry Pi ground pin.
 5. Connect the data pin on the sensor (second pin from the left) to the other end of the resistor.
 6. Finally connect that end of the resistor to a GPIO input pin (GPIO 4)
-
+7. To get data, run `python temp.py`
+8. The script will run forever if uninterrupted. To interrupt the script, type `ctrl + a`
 
