@@ -28,12 +28,8 @@ def get_reading():
     humidity, temperature = DHT.read_retry(SENSOR, INPUT_PIN)
     # convert temperature
     temperature = convert_temp(temperature)
-    print "temperature = "
-    print temperature
-    print "humidity = "
-    print humidity
+    print "temperature = {0}".format(temperature)
+    print "humidity = ".format(humidity)
 
 # get a reading every 10 seconds
-while True:
-    get_reading()
-    
+get_reading()
