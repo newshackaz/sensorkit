@@ -1,5 +1,5 @@
 # this library lets you control the pins
-import Rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
 # this library will let us pause the program
 from time import sleep
 
