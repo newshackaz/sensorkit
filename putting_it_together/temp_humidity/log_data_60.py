@@ -17,7 +17,7 @@ SENSOR = DHT.DHT22
 INPUT_PIN = 4
 
 # store the csv name because we'll use it later
-DATACSV = 'backup.csv'
+DATACSV = 'test_data.csv'
 
 # set up a temp conversion function
 def convert_temp(celcius):
