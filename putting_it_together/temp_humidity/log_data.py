@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 import RPi.GPIO as GPIO
 # load the sensor library
 import Adafruit_DHT as DHT
-
+# load the csv writing module
+import csv
 
 # set up Rpi numbering system
 GPIO.setmode(GPIO.BCM)
@@ -14,7 +15,6 @@ GPIO.setmode(GPIO.BCM)
 SENSOR = DHT.DHT22
 # this is where we read the sensor data
 INPUT_PIN = 4
-
 
 # set up a temp conversion function
 def convert_temp(celcius):
@@ -29,7 +29,14 @@ def get_reading():
     # convert temperature
     temperature = convert_temp(temperature)
     print "temperature = {0}".format(temperature)
-    print "humidity = ".format(humidity)
+    print "humidity = {0}".format(humidity)
+    
+    myCsv = open('data.csv', 'a')
+    csvWriter = csv.writer(myCsv)
+    csvWriter.writerow([now, round(temperature, 2), round(humidity, 2)])
+    myCsv.close()
 
 # get a reading every 10 seconds
-get_reading()
+while True:
+    get_reading()
+    sleep(60)
