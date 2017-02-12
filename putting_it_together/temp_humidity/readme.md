@@ -12,3 +12,7 @@ In this project we'll hook up a temperature and humidity sensor. It's a cool sen
 7. To get data, run `python temp.py`
 8. The script will run forever if uninterrupted. To interrupt the script, type `ctrl + a`
 
+## The Other Scripts 
+`log_data_10.py` logs data into a csv, called `data.csv` every 10 seconds.
+
+`log_data_60.py` logs data each minute into a csv, called `test_data.csv`.
