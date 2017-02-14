@@ -1,10 +1,10 @@
-import time
-import Rpi.GPIO
+from time import sleep
+import RPi.GPIO as GPIO
 
 # set up board numbering system
 GPIO.setmode(GPIO.BCM)
-# this is the pin we read data from
-INPUT_PIN = 4
+# this is the pin we read data from (bottom right)
+INPUT_PIN = 21
 # set up sensor 
 
 # set up the data pin to accept data
@@ -16,10 +16,9 @@ while True:
     
     # current_reading will be a 1 or 0. 1 means motion
     if (current_reading == 1):
-        print "MOTION DETECTING"
+        print "MOTION DETECTED"
     else:
         print "..."
     
     # wait two seconds:
-    sleep(2)
-
+    sleep(1)
