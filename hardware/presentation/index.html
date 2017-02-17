@@ -1,52 +1,108 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Intro to Circuits and the Raspberry Pi</section>
-				<section data-background-image="images/horizontal-rows.png" data-background-size="contain"></section>
-				<section data-background-image="images/verticalpower.png" data-background-size="contain"></section>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+<body>
+    <div class="reveal">
+        <div class="slides">
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+            <!-- title card -->
+            <section data-markdown>
+                <script type="text/template">
+                    ## Intro to Circuits and the Raspberry Pi
+                </script>
+            </section>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+            <!-- WHAT IS THE PI? -->
+
+            <!-- diagram -->
+            <section data-background-image="images/diagram.png"></section>
+            <!-- foundation website -->
+            <section data-background-image="images/foundation.png"></section>
+            <!-- video -->
+            <section data-background-video="images/foundation_video.mp4" data-background-size="contain"></section>
+            <!-- diagram complex -->
+            <section data-background-image="images/diagram_labeled.png"></section>
+            <!-- GPIO PINS -->
+            <section data-background-image="images/pinout.png" data-background-size="contain"></section>
+
+            <!-- CIRCUITS -->
+            <!-- simple circuit -->
+            <section data-background-image="images/simple_circuit.jpg" data-background-size="contain"></section>
+            <!-- complicated circuit? -->
+            <section data-background-image="images/parallelCircuit.jpeg" data-background-size="contain"></section>
+            <!-- LED -->
+            <section data-background-image="images/led.png" data-background-size="contain"></section>
+            <!-- LED GPIO -->
+            <section data-background-image="images/ledGPIO.png" data-background-size="contain"></section>
+
+
+
+
+
+            <!-- breadboarding! -->
+            <section data-background-image="images/horizontal-rows.png" data-background-size="contain"></section>
+            <section data-background-image="images/verticalpower.png" data-background-size="contain"></section>
+
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                    src: 'plugin/markdown/marked.js'
+                },
+                {
+                    src: 'plugin/markdown/markdown.js'
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>
+{ src: 'plugin/notes/notes.js', async: true }, { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } } ] });
+</script>
+</body>
+
 </html>
